@@ -1,3 +1,6 @@
 [submodule "themes/hugo-tufte"]
 	path = themes/hugo-tufte
 	url = git@github.com:loikein/hugo-tufte.git
+[submodule "themes/poison"]
+	path = themes/poison
+	url = git@github.com:lukeorth/poison.git

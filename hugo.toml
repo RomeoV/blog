@@ -1,4 +1,69 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Some of my thoughts'
 theme = 'hugo-tufte'
+canonifyurls = true
+
+[params]
+  math = true
+  KaTeXVersion = "0.16.4"
+  KaTeXCDN = "//cdn.jsdelivr.net/npm"
+  marginNoteInd = "⊕"
+  hidedate = false
+  # subtitle = "Fancy subtitle."
+  showSummary =  true
+  # centerArticle = false
+
+
+
+
+[markup]
+[markup.goldmark.renderer]
+  unsafe = true
+[markup.highlight]
+  noClasses = false
+  guessSyntax = true
+  sectionPagesMenu = 'nav'
+[taxonomies]
+  category = "categories"
+  series = "series"
+  tag = "tags"
+
+
+
+[menu]
+[[menu.nav]]
+  name = "Home"
+  weight = -110
+  identifier = "home"
+  url = "/"
+
+[[menu.nav]]
+  name = "Posts"
+  weight = -100
+  identifier = "posts"
+  url = "/posts/"
+
+[[menu.nav]]
+  name = "A-Book"
+  weight = -95
+  identifier = "book"
+  url = "/a-book/"
+
+[[menu.nav]]
+  name = "Categories"
+  weight = -90
+  identifier = "categories"
+  url = "/categories/"
+
+[[menu.nav]]
+  name = "About"
+  weight = -80
+  identifier = "about"
+  url = "/about/"
+
+[[menu.nav]]
+  name = "Source Code"
+  weight = -70
+  identifier = "github"
+  url = "https://github.com/loikein/hugo-tufte"
