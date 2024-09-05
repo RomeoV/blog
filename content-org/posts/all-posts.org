@@ -4,6 +4,7 @@
 #+hugo_paired_shortcodes: tabs
 #+hugo_paired_shortcodes: tab
 #+hugo_paired_shortcodes: myshortcode
+#+startup: overview
 
 * DONE Hi, I'm Romeo
 :PROPERTIES:
@@ -42,8 +43,8 @@ This is my post body
 ** This is my first subheading.
 Have you ever tried to create a subheading? Because I have!
 
-* Commute times in Zürich
-CLOSED: [2024-09-03 Tue]
+* DONE Commute times in Zürich
+CLOSED: [2024-09-05 Thu 17:20]
 :PROPERTIES:
 :EXPORT_FILE_NAME: commute-times-in-zurich
 :END:
