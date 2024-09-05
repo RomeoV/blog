@@ -1,0 +1,190 @@
+# -*- org-export-with-tags: nil; -*-
+#+hugo_base_dir: ../../
+#+hugo_section: posts
+#+hugo_paired_shortcodes: tabs
+#+hugo_paired_shortcodes: tab
+#+hugo_paired_shortcodes: myshortcode
+
+* TODO Hi, I'm Romeo
+:PROPERTIES:
+:EXPORT_FILE_NAME: about
+:export_hugo_section: about
+:export_author:
+:export_date:
+:END:
+Hi, I'm Romeo!
+
+
+* DONE My first org post :tag1:@category1:
+CLOSED: [2024-09-03 Tue 22:59]
+:PROPERTIES:
+:EXPORT_FILE_NAME: my-first-org-post
+:EXPORT_OPTIONS: toc:t
+:VISIBILITY: folded
+:END:
+This is my post body
+
+** This is my first subheading.
+Have you ever tried to create a subheading? Because I have!
+
+* Commute times in Zürich
+CLOSED: [2024-09-03 Tue]
+:PROPERTIES:
+:EXPORT_FILE_NAME: commute-times-in-zurich
+:END:
+A [[https://www.nzz.ch/schweiz/welche-stadt-den-schnellsten-oev-der-schweiz-hat-und-wieso-man-mit-dem-velo-trotzdem-schneller-ist-ld.1843690][recent article]] in the "Neue Züricher Zeitung" claims that Zürich public transport is "only" about twice the walking speed, and slower than biking.
+
+To make up my own mind, I have evaluated some of my common trips for all three modes of transportation, using google maps.
+Note that some trips start with "bike", which is me biking to the train station, which saves about 6 minutes. I have recorded it as I typically travel -- e.g. I don't bike to the train station when I go to the airport.
+
+#+caption: My commute times.
+#+attr_html: :class sane-table
+| Trip from home to... | ÖV (mins) | bike (mins) | foot (mins) | ÖV Comment         | ÖV / bike | ÖV / foot |
+|----------------------+-----------+-------------+-------------+--------------------+-----------+-----------|
+| friend               |        25 |          31 |          99 | bike & train       |      0.81 |      0.25 |
+| another friend       |        30 |          38 |         109 | bike & train &tram |      0.79 |      0.28 |
+| main station         |        13 |          21 |          65 | bike & train       |      0.62 |      0.20 |
+| nice coffe shop      |        19 |          17 |          48 | foot & tram        |      1.12 |      0.40 |
+| Chinawiese           |        48 |          32 |         105 | foot & 2x tram     |      1.50 |      0.46 |
+| ETH Zentrum          |        25 |          23 |          70 | bike & tram        |      1.09 |      0.36 |
+| ETH Höng             |        17 |          21 |          50 | foot & bus         |      0.81 |      0.34 |
+| UZH Irchel           |        25 |          18 |          45 | foot & tram        |      1.39 |      0.56 |
+| Airport              |        25 |          24 |          81 | foot & train       |      1.04 |      0.31 |
+|----------------------+-----------+-------------+-------------+--------------------+-----------+-----------|
+|                      |           |             |             | *Median ratio:*    |      1.04 |      0.34 |
+#+TBLFM: $6=$2/$3;%.2f
+#+TBLFM: @>$6=vmedian(@2..@-1);%.2f
+#+TBLFM: $7=$2/$4;%.2f
+#+TBLFM: @>$7=vmedian(@2..@-1);%.2f
+
+Note that I have not omitted any trips to doctor the data. So for my day-to-day life I can conclude that taking public transport or the bike is about the same, and consistently about 3x as fast as walking.
+* DONE Some formatting tests
+CLOSED: [2024-09-04 Wed 14:58]
+:PROPERTIES:
+:EXPORT_FILE_NAME: formatting-tests
+:ID:       3177586e-b30a-48a7-819a-41c56f182581
+:EXPORT_OPTIONS: toc:t
+:END:
+** Images :ATTACH:
+:PROPERTIES:
+:ID:       799aa15f-cb50-46fb-87ae-8688cc6a826e
+:END:
+We can attach images to the org heading, we just have to make sure
+#+attr_html: :width 300
+[[attachment:sisl_0_0.png]]
+
+We can even make it textwidth
+#+attr_html: :width 100%
+[[attachment:sisl_0_0.png]]
+
+Note that we have set =org-export-with-tags= to =nil= to not include the tag in the headline.
+
+** Footnotes!
+Here goes a footnote[fn:1].
+Notice that if we call this heading "Footnotes" there is a problem.
+
+** Math
+Here are some inline equations $ \int_a^b x dx $ and some block equations:
+
+$$ 5 \times 5 = 25 $$
+
+Note that I had to change the format with which latex is processed in ox-hugo.
+** Some
+*** More
+**** Subtrees!
+***** Waauw
+****** Weeee
+** Tables
+| Thing    | How much I like it | comment |
+|----------+--------------------+---------|
+| sandwich | much               |         |
+| apple    | not as much        |         |
+|----------+--------------------+---------|
+| vim      | god-tier           |         |
+Looks like hlines are not exported, however.
+** Tabs
+#+attr_shortcode: :tabTotal 2
+#+begin_tabs tabName="First tab"
+#+attr_shortcode: :tabName First Tab
+#+begin_tab
+Hello!
+#+end_tab
+#+attr_shortcode: :tabName Second Tab
+#+begin_tab
+There
+#+end_tab
+#+end_tabs
+
+** Text flow (lipsum)
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+** Footnotes
+
+[fn:1]Here is the footnote!
+* DONE Car make reliability comparison :ATTACH:
+CLOSED: [2024-09-05 Thu 16:55]
+:PROPERTIES:
+:ID:       5b0c27b3-c8e9-4e61-a976-e2bfaf728a62
+:EXPORT_FILE_NAME: car-make-reliability
+:END:
+
+Like many other countries, Finland mandates annual car inspections, and /unlike/ other countries, also [[https://tieto.traficom.fi/en/statistics/statistics-inspections][publishes this data]].
+It aggregates inspection failure data per (make+model, year) and reports average and median odometer reading (i.e. distance driven).
+
+We can therefore plot this data and try to draw our own conclusion. We plot cars produced since 2014 (ten years ago), where each dot represents a different (model, year) tuple, and
+additionally fit a linear regression line.
+
+#+caption: Car inspection failure probability by make and odometer reading.
+[[attachment:plot.svg]]
+
+** Some results
+For the results, I will additionally include the mother company (if applicable).
+The best results in this analysis seem to be for
+- Honda
+- Lexus (Toyota)
+- Suzuki
+- Toyota
+However, none of their models exceed a median odometer reading of 150 thousand km.
+
+Next up we have a big bulk of manufacturers with similar results, including
+- Audi (VW)
+- BMW
+- Ford
+- Mazda
+- Mini (BMW)
+- Mitsubishi (RNM)
+- Porsche (VW)
+- Skoda (VW)
+- Subaru
+- Volkswagen
+- Volvo
+
+Then we see some "high-risers", which start of with a low intercept, but rise to high failure rates quickly:
+- Hyundai
+- Jaguar (Tata Motors)
+- Kia (Hyundai)
+- Mercedes-Benz
+- Nissan (RNM)
+- Opel (Stellantis)
+- Peugot (Stellantis)
+
+Finally we have the "top outliers" that start with a high intercept and keep rising steeply.
+These include
+- Citroen (Stellantis)
+- Dacia (RNM)
+- Renault (RNM)
+- Tesla
+
+And to close, we find Seat (VW), with a strange downward slope, which I can not explain. (The sample size of all Seats, ~11k, is close to the median sample size across all makes, ~12k).
+
+** Do brands differ within the same mother company?
+We can see that results line up quite closely per-mother company.
+For instance, under the Hyundai corporation, Kia and Hyundai have very similar regression lines (left plot).
+Similarly the Stellantis brands Opel, Peugot, and Citroen, line up relatively closely, and so do the Volkswagen brands, although Audi seems to be the "best" of those.
+For RNM, we find Mitsubishi outperforming the others, namely Nissan, Dacia, and Renault.
+Finally, both Toyota and its sub-brand Lexus have among the best results.
+
+** Some caveats
+- Cars are bought for different purposes and thus may receive different levels of care. For instance, a car typically bought for recreational driving may receive a different level of care by its owner as compared to cars bought for work purposes.
+- Factors of car strain, such as temperature, snowfall, road surface, may be different in Finland compared to other countries.
+- One might expect electric car manufacturers to have lower inspection failures due to the relatively lower number of components. However, I can't find such a relation in the data, and notably, Tesla stands out with the highest rate of failures.
