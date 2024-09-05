@@ -14,7 +14,7 @@
 :END:
 
 
-Currently, I am working on certification protocols for machine learning systems in safety-critical domains; first in aerospace, but with future plans for medical, finance, and public policy. To progress with this task, I have been fortunate to join the Stanford Intelligent Systems Lab. If you’re around Stanford and are interested in talking to me, let’s have a coffee!
+Currently, I am working on certification protocols for machine learning systems in safety-critical domains; first in aerospace, but with future plans for medical, finance, and public policy. I have been fortunate to join the Stanford Intelligent Systems Lab. If you’re around Stanford and are interested in talking to me, let’s have a coffee!
 
 My background is in computational mathematics, both theory and implementation, and mathematical optimization, which I applied to process systems optimization during my time at CMU. I have also worked in robotics, including embedded control, motion planning and autonomous navigation.
 
@@ -29,9 +29,6 @@ My interests include:
 - Efficient algorithms for combinatorial optimization
 - Contributions to open science and open source software
 - +Meeting Donald Knuth+ ✔️
-
-
-
 
 * DONE My first org post :tag1:@category1:
 CLOSED: [2024-09-03 Tue 22:59]
