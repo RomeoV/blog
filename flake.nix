@@ -8,9 +8,13 @@
   outputs = { self, nixpkgs, flake-utils }:
     flake-utils.lib.eachDefaultSystem
       (system:
-        let pkgs = nixpkgs.legacyPackages.${system}; in
+        let pkgs = nixpkgs.legacyPackages.${system};
+          hugoWrapper = pkgs.writeShellScriptBin "hugo-wrapper" ''
+            ${pkgs.hugo}/bin/hugo server -D "$@"
+          '';
+        in
         {
-          packages.default = pkgs.hugo;
+          packages.default = hugoWrapper;
           devShells.default = pkgs.mkShell {
             buildInputs = [ pkgs.hugo ];
           };
