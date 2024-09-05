@@ -5,7 +5,7 @@
 #+hugo_paired_shortcodes: tab
 #+hugo_paired_shortcodes: myshortcode
 
-* TODO Hi, I'm Romeo
+* DONE Hi, I'm Romeo
 :PROPERTIES:
 :EXPORT_FILE_NAME: about
 :export_hugo_section: about
