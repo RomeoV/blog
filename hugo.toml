@@ -35,6 +35,7 @@ pluralizelisttitles = false   # removes the automatically appended "s" on sideba
     # flickr_url = "https://flickr.com"
     github_url = "https://github.com/RomeoV"
     gitlab_url = "https://codeberg.org/romeov"
+    google_scholar_url = "https://scholar.google.com/citations?user=c26ONgMAAAAJ&hl=en"
     # instagram_url = "https://instagram.com"
     # linkedin_url = "https://linkedin.com"
     # mastodon_url = "https://mastodon.social"
